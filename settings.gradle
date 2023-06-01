@@ -1,0 +1,6 @@
+rootProject.name = "sandbox-spring-context"
+
+include "examples:annotation-based-configuration"
+include "examples:java-based-configuration"
+include "examples:xml-based-configuration"
+include "examples:package-scanning"
