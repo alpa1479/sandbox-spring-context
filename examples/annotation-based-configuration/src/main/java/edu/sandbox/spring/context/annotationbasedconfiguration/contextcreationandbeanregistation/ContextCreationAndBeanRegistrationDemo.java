@@ -1,28 +1,25 @@
-package edu.sandbox.spring.context.annotationbasedconfiguration;
+package edu.sandbox.spring.context.annotationbasedconfiguration.contextcreationandbeanregistation;
 
-import edu.sandbox.spring.context.annotationbasedconfiguration.services.AnnotationBasedService;
-import edu.sandbox.spring.context.annotationbasedconfiguration.services.NonRegisteredDependency;
-import edu.sandbox.spring.context.annotationbasedconfiguration.services.impl.NonRegisteredDependencyImpl;
+import edu.sandbox.spring.context.annotationbasedconfiguration.contextcreationandbeanregistation.services.AnnotationBasedService;
+import edu.sandbox.spring.context.annotationbasedconfiguration.contextcreationandbeanregistation.services.NonRegisteredDependency;
+import edu.sandbox.spring.context.annotationbasedconfiguration.contextcreationandbeanregistation.services.impl.NonRegisteredDependencyImpl;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
-// this annotation will indicate Spring to start package scanning from AnnotationBasedConfigDemo location in order to find beans for creation
+// this annotation will indicate Spring to start package scanning from ContextCreationAndBeanRegistrationDemo location in order to find beans for creation
 @ComponentScan
-@Slf4j
 @RequiredArgsConstructor
-public class AnnotationBasedConfigurationDemo {
+public class ContextCreationAndBeanRegistrationDemo {
 
     public static void main(String[] args) {
         // creating Annotation-based application context and passing class with @ComponentScan annotation
-        var context = new AnnotationConfigApplicationContext(AnnotationBasedConfigurationDemo.class);
+        var context = new AnnotationConfigApplicationContext(ContextCreationAndBeanRegistrationDemo.class);
         var annotationBasedService = context.getBean(AnnotationBasedService.class); // here we are already able to get bean
         annotationBasedService.doSomething();
 
         // If we want to register bean at runtime
-        log.info("-------------------------------- Dynamic bean registration \n");
         NonRegisteredDependency nonRegisteredDependency = new NonRegisteredDependencyImpl();
         ConfigurableListableBeanFactory beanFactory = context.getBeanFactory();
         beanFactory.registerSingleton("nonRegisteredDependency", nonRegisteredDependency);
