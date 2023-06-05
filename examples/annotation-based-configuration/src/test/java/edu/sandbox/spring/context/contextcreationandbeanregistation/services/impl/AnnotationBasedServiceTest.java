@@ -1,4 +1,4 @@
-package edu.sandbox.spring.context.contextcreationandbeanregistation.service.impl;
+package edu.sandbox.spring.context.contextcreationandbeanregistation.services.impl;
 
 import edu.sandbox.spring.context.annotationbasedconfiguration.contextcreationandbeanregistation.services.AnnotationBasedService;
 import edu.sandbox.spring.context.annotationbasedconfiguration.contextcreationandbeanregistation.services.impl.AnnotationBasedServiceImpl;
