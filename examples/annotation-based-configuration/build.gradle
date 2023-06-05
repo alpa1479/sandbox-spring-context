@@ -7,6 +7,14 @@ targetCompatibility = JavaVersion.VERSION_17
 
 dependencies {
     implementation "ch.qos.logback:logback-classic"
+
+    // this dependency will include:
+    // - spring-aop
+    // - spring-beans
+    // - spring-context
+    // - spring-core
+    // - spring-expression
+    // - spring-jcl
     implementation "org.springframework:spring-context"
 
     compileOnly 'org.projectlombok:lombok'

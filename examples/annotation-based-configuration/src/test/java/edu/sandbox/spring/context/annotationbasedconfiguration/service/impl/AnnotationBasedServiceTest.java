@@ -1,6 +1,9 @@
 package edu.sandbox.spring.context.annotationbasedconfiguration.service.impl;
 
-import edu.sandbox.spring.context.annotationbasedconfiguration.service.AnnotationBasedService;
+import edu.sandbox.spring.context.annotationbasedconfiguration.services.AnnotationBasedService;
+import edu.sandbox.spring.context.annotationbasedconfiguration.services.impl.AnnotationBasedServiceImpl;
+import edu.sandbox.spring.context.annotationbasedconfiguration.services.impl.CircularDependencyImpl;
+import edu.sandbox.spring.context.annotationbasedconfiguration.services.impl.DependencyImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

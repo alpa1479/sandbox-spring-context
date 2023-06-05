@@ -1,4 +1,4 @@
-package edu.sandbox.spring.context.annotationbasedconfiguration.service;
+package edu.sandbox.spring.context.annotationbasedconfiguration.services;
 
 public interface Dependency {
 

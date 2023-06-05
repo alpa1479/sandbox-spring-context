@@ -25,17 +25,27 @@ allprojects {
     dependencyManagement {
         dependencies {
             imports {
-                mavenBom("org.springframework.boot:spring-boot-dependencies:${Versions.springBootDependencies}")
+                mavenBom("org.springframework.boot:spring-boot-dependencies:${Versions.SPRING_BOOT_DEPENDENCIES}")
             }
 
-            dependency("org.springframework:spring-test:${Versions.springTest}")
-            dependency("org.projectlombok:lombok:${Versions.lombok}")
+            dependency("org.projectlombok:lombok:${Versions.LOMBOK}")
         }
     }
 
     configurations.all {
         resolutionStrategy {
             failOnVersionConflict()
+        }
+    }
+}
+
+task printManagedVersions {
+    group "custom help"
+    description "prints available dependencies"
+
+    doLast {
+        dependencyManagement.managedVersions.each {
+            println it
         }
     }
 }
