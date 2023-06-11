@@ -62,7 +62,7 @@ public class ServiceWithDependencyImpl implements ServiceWithDependency {
     @Override
     public void doSomething() {
         dependency.doSomething();
-        log.info(">>>> AnnotationBasedServiceImpl.doSomething()");
+        log.info(">>>> ServiceWithDependencyImpl.doSomething()");
         log.info(">>>> optionalDependency.isPresent() = {}", optionalDependency.isPresent());
     }
 }
