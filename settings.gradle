@@ -1,9 +1,0 @@
-rootProject.name = "sandbox-spring-context"
-
-include "examples:annotation-based-configuration"
-include "examples:bean-lifecycle"
-include "examples:circular-dependency"
-include "examples:injection-types"
-include "examples:java-based-configuration"
-include "examples:xml-based-configuration"
-include "examples:package-scanning"

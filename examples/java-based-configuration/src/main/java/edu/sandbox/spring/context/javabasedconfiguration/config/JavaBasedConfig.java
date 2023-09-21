@@ -1,7 +1,7 @@
 package edu.sandbox.spring.context.javabasedconfiguration.config;
 
-import edu.sandbox.spring.context.javabasedconfiguration.service.JavaBasedConfigService;
 import edu.sandbox.spring.context.javabasedconfiguration.service.Dependency;
+import edu.sandbox.spring.context.javabasedconfiguration.service.JavaBasedConfigService;
 import edu.sandbox.spring.context.javabasedconfiguration.service.impl.DependencyImpl;
 import edu.sandbox.spring.context.javabasedconfiguration.service.impl.JavaBasedConfigServiceImpl;
 import org.springframework.context.annotation.Bean;
