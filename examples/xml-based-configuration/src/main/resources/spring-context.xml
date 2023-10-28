@@ -5,7 +5,7 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="xmlBasedService" name="firstBeanName,secondBeanName"
-          class="edu.sandbox.spring.context.xmlbasedconfiguration.service.impl.XmlBasedServiceImpl">
+          class="edu.sandbox.springcontext.xmlbasedconfiguration.service.impl.XmlBasedServiceImpl">
         <!-- field injection is not available in XML configuration -->
         <!-- for constructor injection -->
         <constructor-arg name="dependency" ref="dependency"/>
@@ -15,14 +15,14 @@
     </bean>
 
     <!--    <util:map id="beansMap" map-class="java.util.HashMap"-->
-    <!--              key-type="edu.sandbox.spring.context.xmlbasedconfiguration.service.impl.TestEnum"-->
-    <!--              value-type="edu.sandbox.spring.context.xmlbasedconfiguration.service.impl.BeanIterface">-->
+    <!--              key-type="edu.sandbox.springcontext.xmlbasedconfiguration.service.impl.TestEnum"-->
+    <!--              value-type="edu.sandbox.springcontext.xmlbasedconfiguration.service.impl.BeanIterface">-->
     <!--        <entry key="A" value-ref="bean1"/>-->
     <!--        <entry key="B" value-ref="bean2"/>-->
     <!--    </util:map>-->
 
-    <bean id="dependency" class="edu.sandbox.spring.context.xmlbasedconfiguration.service.impl.DependencyImpl"/>
-    <!--    <bean id="bean1" class="edu.sandbox.spring.context.xmlbasedconfiguration.service.impl.Bean1"/>-->
-    <!--    <bean id="bean2" class="edu.sandbox.spring.context.xmlbasedconfiguration.service.impl.Bean2"/>-->
+    <bean id="dependency" class="edu.sandbox.springcontext.xmlbasedconfiguration.service.impl.DependencyImpl"/>
+    <!--    <bean id="bean1" class="edu.sandbox.springcontext.xmlbasedconfiguration.service.impl.Bean1"/>-->
+    <!--    <bean id="bean2" class="edu.sandbox.springcontext.xmlbasedconfiguration.service.impl.Bean2"/>-->
 
 </beans>

@@ -5,10 +5,10 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="xmlBasedService"
-          class="edu.sandbox.spring.context.xmlbasedconfiguration.service.impl.XmlBasedServiceImpl">
+          class="edu.sandbox.springcontext.xmlbasedconfiguration.service.impl.XmlBasedServiceImpl">
         <constructor-arg name="dependency" ref="dependency"/>
     </bean>
 
-    <bean id="dependency" class="edu.sandbox.spring.context.xmlbasedconfiguration.service.impl.DependencyImpl"/>
+    <bean id="dependency" class="edu.sandbox.springcontext.xmlbasedconfiguration.service.impl.DependencyImpl"/>
 
 </beans>

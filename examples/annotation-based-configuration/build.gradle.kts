@@ -1,7 +1,3 @@
-plugins {
-    id("java")
-}
-
 dependencies {
     /*
      * org.springframework:spring-context dependency will include:
